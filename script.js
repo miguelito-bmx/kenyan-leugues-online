@@ -33,6 +33,46 @@ const clubs = {
   { name: "FISA Nairobi FC", logo: "F", league: "Regional", zone: "" },
   { name: "Vihiga United FC", logo: "V", league: "Div1", zone: "A" }
 ];
+ const grid = document.getElementById("clubsGrid");
+const clubSearch = document.getElementById("clubSearch");
+const leagueSelect = document.getElementById("leagueSelect");
+const zoneSelect = document.getElementById("zoneSelect");
+
+function displayClubs(filteredClubs) {
+  grid.innerHTML = "";
+  filteredClubs.forEach(club => {
+    const card = document.createElement("div");
+    card.className = "club-card";
+    card.innerHTML = `
+      <div class="club-logo">${club.logo}</div>
+      <div class="club-name">${club.name}</div>
+      <div class="club-league">${club.league} ${club.zone ? '- ' + club.zone : ''}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// Initial display
+displayClubs(clubs);
+
+// Add filter events
+[clubSearch, leagueSelect, zoneSelect].forEach(el => {
+  el.addEventListener("input", () => {
+    const searchText = clubSearch.value.toLowerCase();
+    const leagueFilter = leagueSelect.value;
+    const zoneFilter = zoneSelect.value;
+
+    const filtered = clubs.filter(club => {
+      const matchesName = club.name.toLowerCase().includes(searchText);
+      const matchesLeague = leagueFilter ? club.league === leagueFilter : true;
+      const matchesZone = zoneFilter ? club.zone === zoneFilter : true;
+      return matchesName && matchesLeague && matchesZone;
+    });
+
+    displayClubs(filtered);
+  });
+});
+
 
 };
 
