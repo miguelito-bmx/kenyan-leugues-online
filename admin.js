@@ -1,7 +1,10 @@
 // ------------------------
 // Step 7a: Admin Login
 // ------------------------
-const ADMIN_PASSWORD = "12345"; // change to your secure password
+// ------------------------
+// Step 7a: Admin Login
+// ------------------------
+const ADMIN_PASSWORD = "bigmax"; // your chosen admin password
 
 const loginBtn = document.getElementById("loginBtn");
 const adminPass = document.getElementById("adminPass");
@@ -15,6 +18,18 @@ loginBtn.addEventListener("click", () => {
   } else {
     alert("Wrong password!");
   }
+});
+
+// ------------------------
+// Step 7b: GitHub API Setup
+// ------------------------
+
+// Replace these with your GitHub repo info
+const GITHUB_USERNAME = "BruceMiguel"; // your GitHub username
+const REPO_NAME = "kenya-leagues";     // your existing repo
+const BRANCH = "main";                 // usually "main" branch
+const TOKEN = "YOUR_PERSONAL_ACCESS_TOKEN"; // you need to generate this
+
 });// ------------------------
 // Step 7b: Add Club
 // ------------------------
