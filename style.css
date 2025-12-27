@@ -93,19 +93,11 @@ a {
   justify-content: center;
 }
 /* ----------------------------
-   HOMEPAGE CARDS
----------------------------- */
-.home-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 25px;
-}
-
-.home-cards .card {
-  background-color: #fff;
+  .home-cards .card {
+  background-color: #1E3A8A; /* dark blue */
+  color: #ffffff;             /* white text */
   border-radius: 14px;
-  padding: 25px 15px;
+  padding: 40px 20px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -114,18 +106,19 @@ a {
 
 .home-cards .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 .home-cards .card h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .home-cards .card p {
-  font-size: 14px;
-  color: #555;
+  font-size: 15px;
+  color: #E0E7FF; /* lighter blue for paragraph */
 }
+
 
 
 /* CLUB NAME & LEAGUE */
