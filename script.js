@@ -33,13 +33,16 @@ const clubs = {
   { name: "FISA Nairobi FC", logo: "F", league: "Regional", zone: "" },
   { name: "Vihiga United FC", logo: "V", league: "Div1", zone: "A" }
 ];
- const grid = document.getElementById("clubsGrid");
+const grid = document.getElementById("clubsGrid");
 const clubSearch = document.getElementById("clubSearch");
 const leagueSelect = document.getElementById("leagueSelect");
 const zoneSelect = document.getElementById("zoneSelect");
 
 function displayClubs(filteredClubs) {
   grid.innerHTML = "";
+  if(filteredClubs.length === 0){
+    grid.innerHTML = "<p style='text-align:center;'>No clubs found</p>";
+  }
   filteredClubs.forEach(club => {
     const card = document.createElement("div");
     card.className = "club-card";
@@ -52,54 +55,30 @@ function displayClubs(filteredClubs) {
   });
 }
 
+// Filtering function
+function filterClubs() {
+  const searchText = clubSearch.value.toLowerCase();
+  const leagueFilter = leagueSelect.value;
+  const zoneFilter = zoneSelect.value;
+
+  const filtered = clubs.filter(club => {
+    const matchesName = club.name.toLowerCase().includes(searchText);
+    const matchesLeague = leagueFilter ? club.league === leagueFilter : true;
+    const matchesZone = zoneFilter ? club.zone === zoneFilter : true;
+    return matchesName && matchesLeague && matchesZone;
+  });
+
+  displayClubs(filtered);
+}
+
 // Initial display
 displayClubs(clubs);
 
-// Add filter events
-[clubSearch, leagueSelect, zoneSelect].forEach(el => {
-  el.addEventListener("input", () => {
-    const searchText = clubSearch.value.toLowerCase();
-    const leagueFilter = leagueSelect.value;
-    const zoneFilter = zoneSelect.value;
-
-    const filtered = clubs.filter(club => {
-      const matchesName = club.name.toLowerCase().includes(searchText);
-      const matchesLeague = leagueFilter ? club.league === leagueFilter : true;
-      const matchesZone = zoneFilter ? club.zone === zoneFilter : true;
-      return matchesName && matchesLeague && matchesZone;
-    });
-
-    displayClubs(filtered);
-  });
+// Event listeners
+clubSearch.addEventListener("input", filterClubs);
+clubSearch.addEventListener("keypress", function(e){
+  if(e.key === "Enter") filterClubs();
 });
-
-
-};
-
-// DOM
-const clubSelect = document.getElementById("clubs");
-const fixtureList = document.getElementById("fixtureList");
-
-// Load clubs into dropdown
-Object.keys(clubs).forEach(club => {
-  const option = document.createElement("option");
-  option.value = club;
-  option.textContent = club;
-  clubSelect.appendChild(option);
-});
-
-// When club selected
-clubSelect.addEventListener("change", () => {
-  fixtureList.innerHTML = "";
-  const club = clubSelect.value;
-
-  if (!club) return;
-
-  const li = document.createElement("li");
-  li.innerHTML = `
-    <strong>${club}</strong><br>
-    <a href="${clubs[club]}" target="_blank">Visit Facebook Page</a>
-  `;
-  fixtureList.appendChild(li);
-});
+leagueSelect.addEventListener("change", filterClubs);
+zoneSelect.addEventListener("change", filterClubs);
 
