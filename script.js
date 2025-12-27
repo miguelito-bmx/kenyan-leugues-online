@@ -1,5 +1,7 @@
-const clubs = {
- const clubs = [
+// -----------------------
+// CLUBS ARRAY
+// -----------------------
+const clubs = [
   { name: "Gituru FC", logo: "G", league: "Div1", zone: "A" },
   { name: "Zetech Titans FC", logo: "Z", league: "Div1", zone: "B" },
   { name: "Strathmore University FC", logo: "S", league: "Div1", zone: "A" },
@@ -33,6 +35,10 @@ const clubs = {
   { name: "FISA Nairobi FC", logo: "F", league: "Regional", zone: "" },
   { name: "Vihiga United FC", logo: "V", league: "Div1", zone: "A" }
 ];
+
+// -----------------------
+// FILTERING & DISPLAY LOGIC
+// -----------------------
 const grid = document.getElementById("clubsGrid");
 const clubSearch = document.getElementById("clubSearch");
 const leagueSelect = document.getElementById("leagueSelect");
@@ -81,4 +87,3 @@ clubSearch.addEventListener("keypress", function(e){
 });
 leagueSelect.addEventListener("change", filterClubs);
 zoneSelect.addEventListener("change", filterClubs);
-
