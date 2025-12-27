@@ -77,9 +77,6 @@ function filterClubs() {
   displayClubs(filtered);
 }
 
-// Initial display
-displayClubs(clubs);
-
 // Event listeners
 clubSearch.addEventListener("input", filterClubs);
 clubSearch.addEventListener("keypress", function(e){
