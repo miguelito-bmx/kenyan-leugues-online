@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenyan Football Updates</title>
+  <meta charset="UTF-8">
+  <title>Kenyan Leagues Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+<header>
+  <h1>Kenyan Leagues Online</h1>
+  <p>Lower League Fixtures & Results</p>
+</header>
+
+<main>
+  <section class="club-select">
+    <label for="clubs">Select Club</label>
+    <select id="clubs">
+      <option value="">-- Choose Club --</option>
+    </select>
+  </section>
+
+  <section class="fixtures">
+    <h2>Fixtures & Results</h2>
+    <ul id="fixtureList"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Kenyan Leagues Online</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
