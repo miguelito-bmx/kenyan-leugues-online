@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    position: relative; /* needed for absolute menu positioning */
 }
 
 .logo a {
@@ -124,6 +125,7 @@ body {
 .site-footer small {
     font-size: 0.8rem;
 }
+
 /* MOBILE NAVIGATION */
 .menu-toggle {
     display: none;
@@ -136,46 +138,7 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
 
-    .menu-toggle {
-        display: block;
-    }
-
-    .main-nav .nav-list {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #fff;
-        width: 100%;
-        flex-direction: column;
-        border-top: 1px solid #ddd;
-    }
-
-    .main-nav .nav-list li {
-        padding: 1rem;
-        border-bottom: 1px solid #eee;
-        text-align: center;
-    }
-}
-/* Mobile menu open state */
-@media (max-width: 768px) {
-    .main-nav .nav-list.open {
-        display: flex;
-    }
-}
-/* MOBILE NAVIGATION */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-
-    /* Show hamburger */
+    /* Show hamburger button */
     .menu-toggle {
         display: block;
     }
@@ -186,8 +149,8 @@ body {
         position: absolute;
         top: 70px;
         left: 0;
-        background: #fff;
         width: 100%;
+        background: #fff;
         flex-direction: column;
         border-top: 1px solid #ddd;
         z-index: 1000;
@@ -199,7 +162,7 @@ body {
         text-align: center;
     }
 
-    /* Show menu when open */
+    /* Show menu when .open is added */
     .main-nav .nav-list.open {
         display: flex;
     }
