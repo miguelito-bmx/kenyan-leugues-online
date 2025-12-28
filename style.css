@@ -29,7 +29,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    position: relative; /* needed for absolute menu positioning */
+    position: relative;
 }
 
 .logo a {
@@ -55,6 +55,39 @@ body {
 
 .main-nav a:hover {
     border-bottom: 3px solid #000;
+}
+
+/* Dropdown menus */
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.has-dropdown .dropdown li {
+    padding: 0.5rem 1rem;
+}
+
+.has-dropdown .dropdown li a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.has-dropdown:hover .dropdown {
+    display: block; /* Desktop hover */
 }
 
 /* HERO */
@@ -137,21 +170,18 @@ body {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-
-    /* Show hamburger button */
     .menu-toggle {
         display: block;
     }
 
-    /* Hide menu by default */
     .main-nav .nav-list {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
         background: #fff;
-        flex-direction: column;
         border-top: 1px solid #ddd;
         z-index: 1000;
     }
@@ -162,8 +192,18 @@ body {
         text-align: center;
     }
 
-    /* Show menu when .open is added */
     .main-nav .nav-list.open {
         display: flex;
+    }
+
+    /* Mobile dropdowns */
+    .has-dropdown .dropdown {
+        position: relative;
+        border: none;
+    }
+
+    .has-dropdown.open .dropdown {
+        display: flex;
+        flex-direction: column;
     }
 }
