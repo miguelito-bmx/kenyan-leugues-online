@@ -87,6 +87,14 @@
         <small>© 2025 Your Site Name</small>
     </div>
 </footer>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>
