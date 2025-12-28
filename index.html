@@ -12,27 +12,27 @@
 <header class="site-header">
     <div class="container header-container">
         <div class="logo">
-            <!-- Logo -->
             <a href="#">LOGO</a>
         </div>
 
         <nav class="main-nav">
-    <button class="menu-toggle" aria-label="Open Menu">
-        ☰
-    </button>
+            <!-- Hamburger button -->
+            <button class="menu-toggle" aria-label="Open Menu">
+                ☰
+            </button>
 
-    <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Watch</a></li>
-        <li><a href="#">Standings</a></li>
-        <li><a href="#">Stats</a></li>
-        <li><a href="#">Clubs</a></li>
-        <li><a href="#">Sign In</a></li>
-    </ul>
-</nav>
-
+            <!-- Navigation menu -->
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Standings</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -42,7 +42,6 @@
     <!-- Hero / Featured Section -->
     <section class="hero-section">
         <div class="container">
-            <!-- Featured content -->
             <h1>Featured Section</h1>
         </div>
     </section>
@@ -53,20 +52,15 @@
 
             <div class="block latest">
                 <h2>Latest</h2>
-                <!-- Put articles/items here -->
             </div>
 
             <div class="block featured">
                 <h2>Featured</h2>
-                <!-- Put featured content -->
             </div>
 
             <div class="block videos">
                 <h2>Videos</h2>
-                <!-- Put video/placeholders -->
             </div>
-
-            <!-- Add more blocks as needed -->
 
         </div>
     </section>
@@ -76,24 +70,27 @@
 <!-- FOOTER -->
 <footer class="site-footer">
     <div class="container footer-container">
-
         <div class="footer-links">
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
         </div>
-
         <small>© 2025 Your Site Name</small>
     </div>
 </footer>
+
+<!-- MOBILE MENU TOGGLE JS -->
 <script>
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
 
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('open');
     });
+});
 </script>
+
 </body>
 </html>
