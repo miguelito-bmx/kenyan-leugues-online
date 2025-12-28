@@ -1,174 +1,75 @@
-/* ----------------------------
-   GLOBAL STYLES
----------------------------- */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  margin: 0;
-  padding: 0;
-  color: #333;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* SITE CONTAINERS */
+.container {
+    width: 90%;
+    margin: auto;
 }
 
-/* ----------------------------
-   SEARCH BAR
----------------------------- */
-.search-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* HEADER */
+.site-header {
+    background: #FFF;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.search-bar input,
-.search-bar select {
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  min-width: 180px;
-  transition: all 0.2s ease-in-out;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.search-bar input:focus,
-.search-bar select:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0,123,255,0.4);
+.main-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
-/* ----------------------------
-   CLUBS GRID
----------------------------- */
-#clubsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
-  padding: 25px;
-  justify-items: center;
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
 }
 
-/* ----------------------------
-   CLUB CARD
----------------------------- */
-.club-card {
-  background-color: #fff;
-  width: 200px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+/* HERO */
+.hero-section {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-.club-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+/* CONTENT */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 2rem 0;
 }
 
-/* CLUB LOGO */
-.club-logo {
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 24px;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: #fff;
-  margin: 0 auto 12px auto;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* ----------------------------
-  .home-cards .card {
-  background-color: #1E3A8A; /* dark blue */
-  color: #ffffff;             /* white text */
-  border-radius: 14px;
-  padding: 40px 20px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+.block {
+    padding: 1.5rem;
+    border: 1px solid #eee;
 }
 
-.home-cards .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+/* FOOTER */
+.site-footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-.home-cards .card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+.site-footer .footer-links {
+    margin-bottom: 0.5rem;
 }
 
-.home-cards .card p {
-  font-size: 15px;
-  color: #E0E7FF; /* lighter blue for paragraph */
-}
-
-
-
-/* CLUB NAME & LEAGUE */
-.club-name {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.club-league {
-  font-size: 14px;
-  color: #555;
-}
-
-/* ----------------------------
-   NO CLUBS FOUND MESSAGE
----------------------------- */
-#clubsGrid p {
-  grid-column: 1/-1;
-  font-size: 16px;
-  color: #888;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* ----------------------------
-   RESPONSIVE
----------------------------- */
-@media (max-width: 500px) {
-  .search-bar input,
-  .search-bar select {
-    min-width: 140px;
-  }
-
-  .club-card {
-    width: 160px;
-  }
-
-  .club-logo {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
-  }
-
-  .club-name {
-    font-size: 15px;
-  }
-
-  .club-league {
-    font-size: 13px;
-  }
+.site-footer a {
+    color: #fff;
+    margin: 0 0.7rem;
+    text-decoration: none;
 }
