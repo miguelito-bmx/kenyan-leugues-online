@@ -157,3 +157,9 @@ body {
         text-align: center;
     }
 }
+/* Mobile menu open state */
+@media (max-width: 768px) {
+    .main-nav .nav-list.open {
+        display: flex;
+    }
+}
