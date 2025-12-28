@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenya Grassroots Leagues</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Site Title</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- SEARCH BAR -->
-  <section class="search-bar">
-    <input type="text" id="clubSearch" placeholder="Search Club Name..." />
-    <select id="leagueSelect">
-      <option value="">All Leagues</option>
-      <option value="Div1">Division 1</option>
-      <option value="Div2">Division 2</option>
-      <option value="Regional">Regional Leagues</option>
-    </select>
-    <select id="zoneSelect">
-      <option value="">All Zones</option>
-      <option value="A">Zone A</option>
-      <option value="B">Zone B</option>
-    </select>
-  </section>
+<!-- HEADER + NAVIGATION -->
+<header class="site-header">
+    <div class="container header-container">
+        <div class="logo">
+            <!-- Logo -->
+            <a href="#">LOGO</a>
+        </div>
 
-  <!-- CLUBS GRID -->
-  <section id="clubsGrid">
-    <!-- Club cards will be dynamically added here by script.js -->
-  </section>
-  <section class="home-cards">
-  <div class="card" id="newsCard">
-    <h3>News</h3>
-    <p>Latest updates from grassroots leagues</p>
-  </div>
-  <div class="card" id="tablesCard">
-    <h3>Tables</h3>
-    <p>League standings and points table</p>
-  </div>
-  <div class="card" id="playersCard">
-    <h3>Players</h3>
-    <p>Top players and squad details</p>
-  </div>
-  <div class="card" id="fixturesCard">
-    <h3>Fixtures</h3>
-    <p>Upcoming matches and results</p>
-  </div>
-</section>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Standings</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
+<!-- MAIN CONTENT AREA -->
+<main class="site-main">
 
-  <!-- HOMEPAGE CARDS -->
-  <section class="home-cards">
-    <div class="card" id="newsCard">
-      <h3>News</h3>
-      <p>Latest updates from grassroots leagues</p>
-    </div>
-    <div class="card" id="tablesCard">
-      <h3>Tables</h3>
-      <p>League standings and points table</p>
-    </div>
-    <div class="card" id="playersCard">
-      <h3>Players</h3>
-      <p>Top players and squad details</p>
-    </div>
-    <div class="card" id="fixturesCard">
-      <h3>Fixtures</h3>
-      <p>Upcoming matches and results</p>
-    </div>
-  </section>
+    <!-- Hero / Featured Section -->
+    <section class="hero-section">
+        <div class="container">
+            <!-- Featured content -->
+            <h1>Featured Section</h1>
+        </div>
+    </section>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+    <!-- Content Grid / Cards -->
+    <section class="content-section">
+        <div class="container grid-container">
+
+            <div class="block latest">
+                <h2>Latest</h2>
+                <!-- Put articles/items here -->
+            </div>
+
+            <div class="block featured">
+                <h2>Featured</h2>
+                <!-- Put featured content -->
+            </div>
+
+            <div class="block videos">
+                <h2>Videos</h2>
+                <!-- Put video/placeholders -->
+            </div>
+
+            <!-- Add more blocks as needed -->
+
+        </div>
+    </section>
+    
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-container">
+
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+        <small>© 2025 Your Site Name</small>
+    </div>
+</footer>
+
 </body>
 </html>
