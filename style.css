@@ -124,3 +124,36 @@ body {
 .site-footer small {
     font-size: 0.8rem;
 }
+/* MOBILE NAVIGATION */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav .nav-list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        flex-direction: column;
+        border-top: 1px solid #ddd;
+    }
+
+    .main-nav .nav-list li {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+}
